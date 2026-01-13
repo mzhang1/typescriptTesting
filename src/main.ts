@@ -11,4 +11,4 @@ const firstprice: number = 47.75;
 const printPrice = (name: string, price: number) => {
     console.log(`${name}: ${price}€`);
 }
-console.log(printPrice(cardname, firstprice));
+printPrice(cardname, firstprice);
