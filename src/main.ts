@@ -1,6 +1,15 @@
+type cardObject = {
+    originalName: string;
+    localizedNames?: {
+        fr?: string,
+        de?: string
+    };
+    price: number;
+};
+
 type printSignature = {
     version: string;
-    (name: string, price: number): void;
+    (card: cardObject): void;
 };
 
 const greet = (name: string) : string => {
@@ -10,18 +19,20 @@ const greet = (name: string) : string => {
 const message: string = greet("World");
 console.log(message);
 
-const cardname: string = "Bébé taupe-blaireau";
-const firstprice: number = 47.75;
+const singleCard: cardObject = {
+    originalName: "Bébé taupe-blaireau",
+    price: 47.75
+};
 
 const printPrice = Object.assign(
-    (name: string, price: number) => {
-        console.log(`${name}: ${price}€`);
+    (card: cardObject) => {
+        console.log(`${card.originalName}: ${card.price}€`);
     },
     { version: "1" }
 )
-printPrice(cardname, firstprice);
+printPrice(singleCard);
 
-function reprint(anonFunc: printSignature, name: string, amount: number ){
-    anonFunc(name, amount);
+function reprint(anonFunc: printSignature, card: cardObject ){
+    anonFunc(card);
 }
-reprint(printPrice, cardname, firstprice);
+reprint(printPrice, singleCard);
