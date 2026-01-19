@@ -39,3 +39,7 @@ function reprint(anonFunc: printSignature, card: cardObject ){
     anonFunc(card);
 }
 reprint(printPrice, singleCard);
+
+//Fourth step: Union types
+const mixedType: string | number = 58.99;
+console.log(mixedType);
