@@ -12,3 +12,8 @@ const printPrice = (name: string, price: number) => {
     console.log(`${name}: ${price}€`);
 }
 printPrice(cardname, firstprice);
+
+function reprint(anonFunc: (name: string, price: number) => void, name: string, amount: number ){
+    anonFunc(name, amount);
+}
+reprint(printPrice, cardname, firstprice);
