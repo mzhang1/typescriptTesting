@@ -1,6 +1,6 @@
 type cardObject = {
-    originalName: string;
-    localizedNames?: {
+    readonly originalName: string;
+    readonly localizedNames?: {
         fr?: string,
         de?: string
     };
@@ -21,7 +21,7 @@ const message: string = greet("World");
 console.log(message);
 
 //Second step : printing pre-defined object pattern
-const singleCard: cardObject = {
+let singleCard: cardObject = {
     originalName: "Bébé taupe-blaireau",
     price: 47.75
 };
