@@ -56,4 +56,4 @@ const singleUnsetCard: unsetCard = {
     price: 9.74,
     isSanctionnedLegal: true
 };
-console.log(reprint(printPrice, singleUnsetCard));
+reprint(printPrice, singleUnsetCard)
