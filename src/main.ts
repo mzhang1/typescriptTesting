@@ -1,10 +1,16 @@
-type cardObject = {
-    readonly originalName: string;
-    readonly localizedNames?: {
+interface cardObject
+{
+    originalName: string,
+    localizedNames?: {
         fr?: string,
         de?: string
-    };
+    },
     price: number;
+};
+
+interface unsetCard extends cardObject
+{
+    isSanctionnedLegal: boolean
 };
 
 //First step : Basic greeting call
@@ -43,3 +49,11 @@ reprint(printPrice, singleCard);
 //Fourth step: Union types
 const mixedType: string | number = 58.99;
 console.log(mixedType);
+
+//Fifth step : Using interface
+const singleUnsetCard: unsetCard = {
+    originalName: "Comet, Stellar pup",
+    price: 9.74,
+    isSanctionnedLegal: true
+};
+console.log(reprint(printPrice, singleUnsetCard));
