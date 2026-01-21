@@ -156,6 +156,7 @@ console.log(printCardName(firstCard));
 console.log(printCardName(secondCard));
 
 //Eleventh step : Multiple angle brackets parameters and generic Key usage
+//We can declare placeholders before the argument list
 let getCardProperty = function<T extends Card, K extends keyof T>(card: T, targetKey: K) {
     return card[targetKey];
 };
