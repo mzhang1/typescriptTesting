@@ -165,3 +165,11 @@ console.log(getCardProperty(firstCard, "startingLoyalty"));
 console.log(getCardProperty(firstCard, "colorIdentity"));
 
 console.log(getCardProperty(secondCard, "convertedManaCost"));
+
+const cards: Card[] = [
+    firstCard,
+    secondCard
+]
+cards.map(function<K, V extends Card>(card: V, key: K) : void {
+    console.log(`Index ${key} : ${card.originalName}`);
+});
