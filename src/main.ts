@@ -85,16 +85,21 @@ enum Color {
     Green
 };
 
+type BaseCardInfos = {
+    originalName: string,
+    colorIdentity: Color,
+    convertedManaCost: number
+}
+
 //Eighth step : Using classes with enums
 class Card{
     readonly originalName: string;
     readonly colorIdentity: Color;
+    readonly convertedManaCost: number;
 
-    constructor(cardParams: {
-        originalName: string,
-        colorIdentity: Color
-    }){
+    constructor(cardParams: BaseCardInfos){
         this.originalName = cardParams.originalName;
         this.colorIdentity = cardParams.colorIdentity;
+        this.convertedManaCost = cardParams.convertedManaCost
     }
 }
