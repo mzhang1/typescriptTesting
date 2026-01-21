@@ -65,3 +65,6 @@ const genericFunctionReturn: genericFunctionType = <T>(arg: T) => {
     return arg;
 };
 console.log(genericFunctionReturn("String type"));
+console.log(genericFunctionReturn(244));
+console.log(genericFunctionReturn(null));
+console.log(genericFunctionReturn(singleUnsetCard));
