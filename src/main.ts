@@ -76,3 +76,25 @@ function loggingIdentity<T>(arg: Array<T>): Array<T> {
 }
 console.log(loggingIdentity([1,4,7,11,14]));
 console.log(loggingIdentity(["251",252,255,"260",null,NaN]));
+
+enum Color {
+    White,
+    Blue,
+    Black,
+    Red,
+    Green
+};
+
+//Eighth step : Using classes with enums
+class Card{
+    readonly originalName: string;
+    readonly colorIdentity: Color;
+
+    constructor(cardParams: {
+        originalName: string,
+        colorIdentity: Color
+    }){
+        this.originalName = cardParams.originalName;
+        this.colorIdentity = cardParams.colorIdentity;
+    }
+}
