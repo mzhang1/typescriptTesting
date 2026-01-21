@@ -58,7 +58,7 @@ const singleUnsetCard: unsetCard = {
 };
 reprint(printPrice, singleUnsetCard)
 
-//Sixth step : Using generics
+//Sixth step : Using generics, the type will be determined upon running the function
 type genericFunctionType = <T>(arg: T) => T;
 const genericFunctionReturn: genericFunctionType = <T>(arg: T) => {
     console.log(typeof arg);
