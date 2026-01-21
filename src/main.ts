@@ -134,3 +134,23 @@ myGenericNumber.addToCurrent = function(x: number): void {
 myGenericNumber.addToCurrent(252);
 myGenericNumber.addToCurrent(6);
 console.log(myGenericNumber.current);
+
+//Tenth step : Generic types extension
+function printCardName<T extends Card>(card: T) : string
+{
+    return card.originalName;
+}
+const firstCard = new PlaneswalkerCard({
+    originalName: "The Royal Scions",
+    convertedManaCost: 3,
+    colorIdentity: Color.Blue | Color.Red
+}, {
+    startingLoyalty: 4
+});
+const secondCard = new Card({
+    originalName: "Omnath, Locust of the Roil",
+    convertedManaCost: 4,
+    colorIdentity: Color.Blue | Color.Red | Color.Green
+});
+console.log(printCardName(firstCard));
+console.log(printCardName(secondCard));
