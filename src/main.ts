@@ -57,3 +57,11 @@ const singleUnsetCard: unsetCard = {
     isSanctionnedLegal: true
 };
 reprint(printPrice, singleUnsetCard)
+
+//Sixth step : Using generics
+type genericFunctionType = <T>(arg: T) => T;
+const genericFunctionReturn: genericFunctionType = <T>(arg: T) => {
+    console.log(typeof arg);
+    return arg;
+};
+console.log(genericFunctionReturn("String type"));
