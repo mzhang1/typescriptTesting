@@ -114,3 +114,23 @@ class PlaneswalkerCard extends Card{
         this.startingLoyalty = customTypeInfos.startingLoyalty;
     }
 }
+
+//Nineth step : Generic class
+class GenericNumber<NumType> {
+    current: NumType;
+    zeroValue: NumType;
+    add: (x: NumType, y: NumType) => NumType;
+    addToCurrent: (x: NumType) => void;
+}
+let myGenericNumber = new GenericNumber<number>();
+myGenericNumber.current = 0;
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function(x: number, y: number){
+    return x + y;
+};
+myGenericNumber.addToCurrent = function(x: number): void {
+    this.current += x;
+}
+myGenericNumber.addToCurrent(252);
+myGenericNumber.addToCurrent(6);
+console.log(myGenericNumber.current);
