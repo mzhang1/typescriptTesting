@@ -68,3 +68,11 @@ console.log(genericFunctionReturn("String type"));
 console.log(genericFunctionReturn(244));
 console.log(genericFunctionReturn(null));
 console.log(genericFunctionReturn(singleUnsetCard));
+
+//Seventh step : Using generics with supertype
+function loggingIdentity<T>(arg: Array<T>): Array<T> {
+    console.log(arg.length);
+    return arg;
+}
+console.log(loggingIdentity([1,4,7,11,14]));
+console.log(loggingIdentity(["251",252,255,"260",null,NaN]));
