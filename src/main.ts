@@ -154,3 +154,13 @@ const secondCard = new Card({
 });
 console.log(printCardName(firstCard));
 console.log(printCardName(secondCard));
+
+//Eleventh step : Multiple angle brackets parameters and generic Key usage
+let getCardProperty = function<T extends Card, K extends keyof T>(card: T, targetKey: K) {
+    return card[targetKey];
+};
+console.log(getCardProperty(firstCard, "originalName"));
+console.log(getCardProperty(firstCard, "startingLoyalty"));
+console.log(getCardProperty(firstCard, "colorIdentity"));
+
+console.log(getCardProperty(secondCard, "convertedManaCost"));
