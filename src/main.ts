@@ -1,3 +1,7 @@
+import defaultFunction from '@/conditionalTest';
+
+defaultFunction();
+
 interface cardObject
 {
     originalName: string,
