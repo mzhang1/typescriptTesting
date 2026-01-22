@@ -1,4 +1,4 @@
 //Eleventh step : Conditionnal object type
-type DescriptionMetadata = {
+export type DescriptionMetadata = {
     [key: string]: string | number | null
 }
