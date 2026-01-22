@@ -1,4 +1,7 @@
 import defaultFunction from '@/conditionalTest';
+import { Card } from '@/classes/card';
+import { PlaneswalkerCard } from '@/classes/planeswalkercard';
+import { Color } from '@/enums';
 
 defaultFunction();
 
@@ -80,44 +83,6 @@ function loggingIdentity<T>(arg: Array<T>): Array<T> {
 }
 console.log(loggingIdentity([1,4,7,11,14]));
 console.log(loggingIdentity(["251",252,255,"260",null,NaN]));
-
-enum Color {
-    White,
-    Blue,
-    Black,
-    Red,
-    Green
-};
-
-type BaseCardInfos = {
-    originalName: string,
-    colorIdentity: Color,
-    convertedManaCost: number
-}
-
-//Eighth step : Using classes with enums
-class Card{
-    readonly originalName: string;
-    readonly colorIdentity: Color;
-    readonly convertedManaCost: number;
-
-    constructor(cardParams: BaseCardInfos){
-        this.originalName = cardParams.originalName;
-        this.colorIdentity = cardParams.colorIdentity;
-        this.convertedManaCost = cardParams.convertedManaCost
-    }
-}
-
-class PlaneswalkerCard extends Card{
-    readonly startingLoyalty: number;
-
-    constructor(cardParams: BaseCardInfos, customTypeInfos: {
-        startingLoyalty: number
-    }){
-        super(cardParams);
-        this.startingLoyalty = customTypeInfos.startingLoyalty;
-    }
-}
 
 //Nineth step : Generic class
 class GenericNumber<NumType> {
