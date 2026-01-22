@@ -182,8 +182,3 @@ cards.map(function<K, V extends Card>(card: V, key: K) : void {
 type printReturnType = ReturnType<typeof printCardName>
 const printed: printReturnType = "Nostalgie";
 console.log("Printed card name : " + printed);
-
-//Eleventh step : Conditionnal object type
-type DescriptionMetadata = {
-    [key: string]: string | number | null
-}
