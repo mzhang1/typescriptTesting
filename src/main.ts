@@ -33,7 +33,7 @@ let singleCard: cardObject = {
 };
 
 const printPrice = Object.assign(
-    (card: cardObject) => {
+    (card: cardObject) : void => {
         console.log(`${card.originalName}: ${card.price}€`);
     },
     { version: "1" }
@@ -173,3 +173,8 @@ const cards: Card[] = [
 cards.map(function<K, V extends Card>(card: V, key: K) : void {
     console.log(`Index ${key} : ${card.originalName}`);
 });
+
+//Tenth step : Using return type utility type (This can only be used as type and takes only types as angle bracket argument)
+type printReturnType = ReturnType<typeof printCardName>
+const printed: printReturnType = "Nostalgie";
+console.log("Printed card name : " + printed);
