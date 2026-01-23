@@ -1,13 +1,15 @@
 import { Card } from "@/classes/card";
 
 export class CardList{
-    current: Card[] = [];
+    static #instance: CardList;
 
-    get(): Card[] {
-        return this.current;
-    }
+    private constructor() {}
 
-    add(newCard: Card) : void {
-        this.current.push(newCard);
+    public static get() : CardList {
+        if(!CardList.#instance){
+            CardList.#instance = new CardList();
+        }
+
+        return CardList.#instance;
     }
 }
