@@ -2,7 +2,8 @@
   "name": "typescript-testing",
   "private": true,
   "scripts": {
-    "dev": "webpack --env mode=development --watch"
+    "dev": "webpack --env mode=development --watch",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
