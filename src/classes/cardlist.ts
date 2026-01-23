@@ -6,4 +6,8 @@ export class CardList{
     get(): Card[] {
         return this.current;
     }
+
+    add(newCard: Card) : void {
+        this.current.push(newCard);
+    }
 }
