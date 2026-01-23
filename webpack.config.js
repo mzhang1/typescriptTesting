@@ -29,6 +29,11 @@ module.exports = (env) => {
         plugins: [new HtmlWebpackPlugin({
             template: 'src/index.html'
         })],
-        mode: env.mode
+        mode: env.mode,
+        watchOptions: {
+            ignored: [
+                "**/dist/**"
+            ]
+        }
     };
 };
