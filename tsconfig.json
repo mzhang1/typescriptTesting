@@ -12,7 +12,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "es6",
     "target": "es6",
-    "types": [],
+    "types": ["jest"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
