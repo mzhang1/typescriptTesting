@@ -44,6 +44,9 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+
+    // Additional settings
+    "esModuleInterop": true
   },
   "exclude": [
     "./dist"
