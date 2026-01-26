@@ -32,7 +32,8 @@ module.exports = (env) => {
         mode: env.mode,
         watchOptions: {
             ignored: [
-                "**/dist/**"
+                "**/dist/**",
+                "**/test/**"
             ]
         }
     };
