@@ -46,7 +46,6 @@
     "skipLibCheck": true,
   },
   "exclude": [
-    "./test",
     "./dist"
   ]
 }
