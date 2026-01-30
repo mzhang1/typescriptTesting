@@ -12,7 +12,7 @@ export class Card{
         this.convertedManaCost = cardParams.convertedManaCost
     }
 
-    addMetadata(metadata: Partial<CardMetadata>){
+    addMetadata(metadata: Partial<CardMetadata>) : void {
         
     }
     
