@@ -40,4 +40,6 @@ test("Card can receive additional data", () => {
     let additionalData: Partial<types.CardMetadata> = {
         color: Color.Blue | Color.Black
     };
+
+    wistfullNessCard.addMetadata(additionalData);
 });
