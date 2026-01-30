@@ -1,5 +1,6 @@
 import { Card } from "@/classes/card";
 import { Color } from "@/enums";
+import type * as types from "@/types";
 
 test("Card's properties can be updated", () => {
     let testCard: Card = new Card({
