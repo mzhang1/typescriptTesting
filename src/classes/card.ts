@@ -5,6 +5,8 @@ export class Card{
     originalName: string;
     colorIdentity: Color;
     convertedManaCost: number;
+    color: Color;
+    flavorText: string;
 
     constructor(cardParams: BaseCardInfos){
         this.originalName = cardParams.originalName;
@@ -13,11 +15,7 @@ export class Card{
     }
 
     addMetadata(metadata: Partial<CardMetadata>) : void {
-        
-    }
-
-    getMetadata(targetKey: keyof CardMetadata | keyof BaseCardInfos){
-        
+        Object.assign(this, metadata);
     }
     
     update(newCardParams: Partial<BaseCardInfos>) : void {
