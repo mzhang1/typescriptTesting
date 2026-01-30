@@ -18,3 +18,13 @@ test("Card's properties can be updated", () => {
     expect(testCard.convertedManaCost).toBe(6);
     expect(testCard.colorIdentity).toBe(Color.Black | Color.Blue);
 })
+
+test("Card to string method functions normally", () => {
+    let testCard: Card = new Card({
+        originalName: "Emptiness",
+        colorIdentity: Color.Black | Color.White,
+        convertedManaCost: 6
+    });
+
+    expect(testCard.toString()).toBe("Emptiness (Converted mana cost : 6)");
+})
