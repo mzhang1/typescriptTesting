@@ -15,6 +15,10 @@ export class Card{
     addMetadata(metadata: Partial<CardMetadata>) : void {
         
     }
+
+    getMetadata(targetKey: keyof CardMetadata | keyof BaseCardInfos){
+        
+    }
     
     update(newCardParams: Partial<BaseCardInfos>) : void {
         this.originalName = newCardParams.originalName ?? this.originalName;
