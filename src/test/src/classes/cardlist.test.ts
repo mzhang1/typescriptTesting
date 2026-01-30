@@ -9,9 +9,12 @@ test("CardList should be accessible at any point", () => {
 })
 
 test("CardList.add should work", () => {
-    expect(CardList.add(new Card({
+    const card: Card = new Card({
         originalName: "Emptiness",
         colorIdentity: Color.White | Color.Black,
         convertedManaCost: 6
-    }))).not.toThrow(Error);
+    })
+    CardList.add(card);
+
+    expect(CardList.get().current.length).toBe(1);
 })
