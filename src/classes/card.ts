@@ -17,4 +17,8 @@ export class Card{
         this.colorIdentity = newCardParams.colorIdentity ?? this.colorIdentity;
         this.convertedManaCost = newCardParams.convertedManaCost ?? this.convertedManaCost;
     }
+
+    toString() : string {
+        return `${this.originalName} (Converted mana cost : ${this.convertedManaCost})`;
+    }
 }
