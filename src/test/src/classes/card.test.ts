@@ -29,3 +29,11 @@ test("Card to string method functions normally", () => {
 
     expect(testCard.toString()).toBe("Emptiness (Converted mana cost : 6)");
 })
+
+test("Card can receive additional data", () => {
+    let wistfullNessCard: Card = new Card({
+        originalName: "Wistfullness",
+        colorIdentity: Color.Blue | Color.White,
+        convertedManaCost: 5
+    });
+});
