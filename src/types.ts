@@ -16,4 +16,4 @@ export type CardDescription = {
     flavorText: string
 };
 
-export type CardMetadata = Omit<BaseCardInfos, keyof CardDescription>;
+export type CardMetadata = Omit<CardDescription,keyof BaseCardInfos>;
