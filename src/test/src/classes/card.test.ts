@@ -37,7 +37,7 @@ test("Card can receive additional data", () => {
         convertedManaCost: 5
     });
 
-    let additionalData: Partial<types.CardDescription> = {
+    let additionalData: Partial<types.CardMetadata> = {
         color: Color.Blue | Color.Black
     };
 });
