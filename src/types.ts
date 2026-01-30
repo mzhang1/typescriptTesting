@@ -8,3 +8,12 @@ export type BaseCardInfos = {
     colorIdentity: Color,
     convertedManaCost: number
 }
+
+export type CardDescription = {
+    originalName: string,
+    color: Color,
+    colorIdentity: Color,
+    flavorText: string
+};
+
+export type CardMetadata = Omit<BaseCardInfos, keyof CardDescription>;
