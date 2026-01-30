@@ -1,5 +1,5 @@
 import { Color } from "@/enums";
-import type { BaseCardInfos } from "@/types";
+import type { BaseCardInfos, CardMetadata } from "@/types";
 
 export class Card{
     originalName: string;
@@ -10,6 +10,10 @@ export class Card{
         this.originalName = cardParams.originalName;
         this.colorIdentity = cardParams.colorIdentity;
         this.convertedManaCost = cardParams.convertedManaCost
+    }
+
+    addMetadata(metadata: Partial<CardMetadata>){
+        
     }
     
     update(newCardParams: Partial<BaseCardInfos>) : void {
