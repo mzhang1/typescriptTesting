@@ -42,5 +42,5 @@ test("Card can receive additional data", () => {
     };
 
     wistfullNessCard.addMetadata(additionalData);
-    expect(wistfullNessCard.getMetadata("color")).toBe(Color.Blue | Color.Black);
+    expect(wistfullNessCard["color"]).toBe(Color.Blue | Color.Black);
 });
